@@ -32,7 +32,7 @@ const authorizeHR = (req, res, next) => {
 router.use(authenticate);
 
 // Employee raises a grievance
-router.post('/raises', grievanceController.raiseGrievance);
+router.post('/', grievanceController.raiseGrievance);
 
 // HR resolves a grievance
 router.patch('/:id/resolve', authorizeHR, grievanceController.resolveGrievance);
